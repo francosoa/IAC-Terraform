@@ -9,18 +9,18 @@ terraform {
 
 }
 
-
 # Configure the AWS Provider
 provider "aws" {
   region = "us-west-2"
   profile = "default"
 }
-
-resource "aws_instance" "app_server" {
+#define components of my infra
+resource "aws_instance" "dev" {
+    count = 3 #generate 3 instances
     ami = "ami-83065c"
     instance_type = "t2.micro"
+    key_name = "file_key"
     tags = {
-      "Name" = "MyFirstInstance"
+      "Name" = "dev${count.index}" #change the name of files(1,2,3)
     }
-    key_name = "file.pem"
 }

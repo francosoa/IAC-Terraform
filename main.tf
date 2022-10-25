@@ -24,3 +24,20 @@ resource "aws_instance" "dev" {
       "Name" = "dev${count.index}" #change the name of files(1,2,3)
     }
 }
+# https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group
+resource "aws_security_group" "acesso-dev" {
+  name        = "acesso-dev"
+  description = "Allow acesso-dev"
+  vpc_id      = aws_vpc.main.id
+
+  ingress {
+    from_port        = 22
+    to_port          = 22
+    protocol         = "tcp"
+    cidr_blocks      = ["45.191.13"] #several IPs
+  }
+
+  tags = {
+    Name = "dev-acess"
+  }
+}

@@ -19,8 +19,11 @@ Os comandos abaixo servem para iniciar, e subir as alterações do Terraform
 
 <terraform init> - inicia o terraform
 <terraform plan> - mostra o que mudou/O que está planejado
-<terraform apply> - aplica o que estava planejado, e pergunta se deseja aplicar. É necessário apertar o YES
+<terraform apply> - aplica o que estava planejado, e pergunta se deseja aplicar. 
+<terraform show> - mostra como está o ambiente atual
+É necessário apertar o YES
 
 ### gitignore:
 
 Alguns arquivos não podem ir para o repositório, por se tratar de chaves, senhas e etc. No site https://www.toptal.com/developers/gitignore é possível ter acesso a alguns arquivos que geralmente são colocados no git ignore pela comunidade
+

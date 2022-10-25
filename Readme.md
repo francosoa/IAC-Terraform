@@ -8,7 +8,8 @@ Criar a chave não é a única tarefa, é necessário referenciar a chave em res
 
 - Adicionar um nome key_name: <nome_do_arquivo_chave>
 
-No <required> (arquivo main.tf) os providers são os provedores necessários (nuvem);
+No <required_providers> (arquivo main.tf) são os provedores necessários (nuvem);
+
 <ami> é o códido do EC2: Lembrando que o AMI muda de acordo com a região;
 <tags> é o nome que damos para a nossa instância (Esse nome vai aparecer no EC2)
 

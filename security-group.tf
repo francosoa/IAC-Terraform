@@ -9,7 +9,7 @@ resource "aws_security_group" "acesso-dev" {
     from_port        = 22
     to_port          = 22
     protocol         = "tcp"
-    cidr_blocks      = ["45.191.13"] #several IPs
+    cidr_blocks      = var.cdirblocks #several IPs
   }
 
   tags = {
@@ -27,7 +27,7 @@ resource "aws_security_group" "acesso-dev-us-e2" {
     from_port        = 22
     to_port          = 22
     protocol         = "tcp"
-    cidr_blocks      = ["45.191.13"] #several IPs
+    cidr_blocks      = var.cdirblocks #several IPs
   }
 
   tags = {

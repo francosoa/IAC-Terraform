@@ -31,8 +31,6 @@ resource "aws_s3_bucket" "dev4" {
     Environment = "Dev"
   }
 }
-<<<<<<< Updated upstream
-=======
 
 #Create a database to instance Dev-6
 resource "aws_dynamodb_table" "table-dev6" {
@@ -52,9 +50,4 @@ resource "aws_dynamodb_table" "table-dev6" {
     type = "S"
   }
 }
-
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 

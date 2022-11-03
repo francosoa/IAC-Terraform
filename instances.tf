@@ -27,7 +27,7 @@ resource "aws_instance" "dev5" {
     instance_type = "t2.micro"
     key_name = "file_key"
     tags = {
-      "Name" = "dev5" 
+      "Name" = var.key_name
     }
     vpc_security_group_ids = ["${aws_security_group.acesso-dev.id }"] 
 }
@@ -38,7 +38,7 @@ resource "aws_instance" "dev6" {
     instance_type = "t2.micro"
     key_name = "file_key"
     tags = {
-      "Name" = "dev6" 
+      "Name" = var.key_name
     }
     vpc_security_group_ids = ["${aws_security_group.acesso-dev-us-e2.id }"] 
 }

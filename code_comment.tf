@@ -84,6 +84,21 @@ resource "aws_s3_bucket" "dev4" {
   }
 }
 
+
+#Create a database to instance Dev-6
+resource "aws_dynamodb_table" "table-dev6" {
+  provider = "aws.us-east-2"
+  name = "Dynamo-Dev6"
+  billing_mode = "PAY_PER_REQUEST"
+  hash_key = "UserId"
+  range_key = "GameTitle"
+
+  attribute {
+    name = "UserId"
+    type = "S"
+  }
+}
+
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group
 resource "aws_security_group" "acesso-dev" {
   name        = "acesso-dev"

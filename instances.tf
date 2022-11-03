@@ -40,5 +40,6 @@ resource "aws_instance" "dev6" {
     tags = {
       "Name" = "dev6" 
     }
-    vpc_security_group_ids = ["${aws_security_group.acesso-dev-us-e2.id }"] 
+    vpc_security_group_ids = ["${aws_security_group.acesso-dev-us-e2.id }"]
+    depends_on = ["aws_dynamodb_table.table-dev6"]
 }

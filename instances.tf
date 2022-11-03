@@ -42,3 +42,4 @@ resource "aws_instance" "dev6" {
     }
     vpc_security_group_ids = ["${aws_security_group.acesso-dev-us-e2.id }"] 
 }
+

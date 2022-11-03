@@ -53,4 +53,8 @@ resource "aws_dynamodb_table" "table-dev6" {
   }
 }
 
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+
